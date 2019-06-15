@@ -12,12 +12,12 @@ bot.on("ready", function() {
 
 bot.on('message', msg => {
   if(msg.content[0] === PREFIX) {
-    if(msg.content === PREFIX + 'mention') {
+    if(msg.content === PREFIX + 'Mention') {
       let role = msg.guild.roles.find('name', 'Mention')
 
       if(msg.member.roles.find('name', 'Mention')) {
         msg.member.removeRole(role)
-        msg.reply(':white_check_mark: Ce rôle vous a été enlevé.')
+        msg.reply(':x: Ce rôle vous a été enlevé.')
       }
       else {
         msg.member.addRole(role)

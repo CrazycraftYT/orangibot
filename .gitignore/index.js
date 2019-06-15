@@ -11,7 +11,7 @@ bot.on("ready", function() {
 });
 
 bot.on('message', msg => {
-  if(MessageChannel.content[0] === PREFIX) {
+  if(msg.content[0] === PREFIX) {
     if(msg.content === PREFIX + 'Mention') {
       let role = msg.guild.roles.find('name', 'Mention')
 

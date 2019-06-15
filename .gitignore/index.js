@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 
-var prefix = "!";
+var PREFIX = "!";
 
 var bot = new Discord.Client();
 
@@ -12,7 +12,7 @@ bot.on("ready", function() {
 
 bot.on('message', msg => {
   if(msg.content[0] === PREFIX) {
-    if(msg.content === PREFIX + 'Mention') {
+    if(msg.content === PREFIX + 'mention') {
       let role = msg.guild.roles.find('name', 'Mention')
 
       if(msg.member.roles.find('name', 'Mention')) {

@@ -12,10 +12,10 @@ bot.on("ready", function() {
 
 bot.on('message', msg => {
   if(msg.content[0] === PREFIX) {
-    if(msg.content === PREFIX + 'Mention') {
-      let role = msg.guild.roles.find('name', 'Mention')
+    if(msg.content === PREFIX + 'role1') {
+      let role = msg.guild.roles.find('name', 'role1')
 
-      if(msg.member.roles.find('name', 'Mention')) {
+      if(msg.member.roles.find('name', 'role1')) {
         msg.member.removeRole(role)
         msg.reply(':x: Ce rôle vous a été enlevé.')
       }
